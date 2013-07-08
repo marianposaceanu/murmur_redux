@@ -1,4 +1,4 @@
-# Search redux
+# Murmur redux
 
 A simpler wrapper around [murmurhash3](https://github.com/funny-falcon/murmurhash3-ruby) gem with a nicer API.
 

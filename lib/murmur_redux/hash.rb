@@ -4,12 +4,12 @@ module MurmurRedux
       def digest(string)
         ints = MurmurHash3::V128.str_hash(string)
 
-        gen_hex_string(ints)
+        generate_hex_string(ints)
       end
 
       private
 
-      def gen_hex_string(ints)
+      def generate_hex_string(ints)
         ints.pack('L*').unpack('H*').first
       end
     end
