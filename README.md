@@ -26,11 +26,13 @@ hex_string = MurmurRedux::Hash.digest('test')
 
 1. What is MurmurHash ?
 
->MurmurHash is a non-cryptographic hash function suitable for general hash-based lookup. It was created by Austin Appleby in 2008, and exists in a number of variants, all of which have been released into the public domain. When compared to other popular hash functions, MurmurHash performed well in a random distribution of regular keys.[0]
+From its Wikipedia page[0] :
 
-2. How fast is MurmurHash ?
+>MurmurHash is a non-cryptographic hash function suitable for general hash-based lookup. It was created by Austin Appleby in 2008, and exists in a number of variants, all of which have been released into the public domain. When compared to other popular hash functions, MurmurHash performed well in a random distribution of regular keys.
 
->Is one of the fastest hashing algorithms with with good to great collision resistence[1].
+2. How fast is it ?
+
+Is one of the fastest hashing algorithms with with good to great collision resistence[1].
 
 - [0] - [wiki article](http://en.wikipedia.org/wiki/MurmurHash)
 - [1] - [performance](http://programmers.stackexchange.com/questions/49550/which-hashing-algorithm-is-best-for-uniqueness-and-speed)
