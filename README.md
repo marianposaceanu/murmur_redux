@@ -2,9 +2,7 @@
 
 A simpler wrapper around [murmurhash3](https://github.com/funny-falcon/murmurhash3-ruby) gem with a nicer API.
 
-## Requirements
-
-Murmur redux requires at least Ruby >= 1.9.2
+It defaults to `MurmurHash3_x86_128` which is a nice combination of low latency and with good collision resistence.
 
 ## Installation
 
@@ -19,12 +17,31 @@ gem 'murmur_redux'
 By default it uses MurmurHash3_x86_128 which is a nice combination of low latency and with good collision resistence.
 
 ```ruby
-class MyClass
-  hex_string = MurmurRedux::Hash.digest('test')
-end
+hex_string = MurmurRedux::Hash.digest('test')
+
+# => '9de1bd74cc287dac824dbdf93182129a'
 ```
 
-## License (MIT)
+### FAQ
+
+1. What is MurmurHash ?
+
+>MurmurHash is a non-cryptographic hash function suitable for general hash-based lookup. It was created by Austin Appleby in 2008, and exists in a number of variants, all of which have been released into the public domain. When compared to other popular hash functions, MurmurHash performed well in a random distribution of regular keys.[0]
+
+2. How fast is MurmurHash ?
+
+>Is one of the fastest hashing algorithms with with good to great collision resistence[1].
+
+- [0] - [wiki article](http://en.wikipedia.org/wiki/MurmurHash)
+- [1] - [performance](http://programmers.stackexchange.com/questions/49550/which-hashing-algorithm-is-best-for-uniqueness-and-speed)
+
+### Credits
+
+- [MurmurHash3](https://code.google.com/p/smhasher/wiki/MurmurHash3)
+- [murmurhash3-ruby gem](https://github.com/funny-falcon/murmurhash3-ruby)
+- [Byte Friendly article on MurmurHash 3](http://tech.tulentsev.com/2012/10/ruby-gem-for-murmurhash-3)
+
+### License (MIT)
 
 Copyright (c) 2013 Marian Posaceanu
 
