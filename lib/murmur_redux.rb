@@ -1,5 +1,5 @@
 module MurmurRedux
-  require 'murmur_redux/murmur_native'
+  require 'murmur_native'
   V32  = Native32
   V128 = Native128
 end

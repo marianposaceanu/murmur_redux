@@ -1,3 +1,3 @@
 module MurmurRedux
-  VERSION = '1.0.0' unless defined? MurmurRedux::VERSION
+  VERSION = '1.0.1' unless defined? MurmurRedux::VERSION
 end
