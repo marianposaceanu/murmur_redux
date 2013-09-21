@@ -44,8 +44,6 @@ shared_examples_32 = proc do
   end
 end
 
-require './lib/murmur_redux/murmur_native'
-
 describe "Native 32" do
   let(:murmur) { MurmurRedux::Native32 }
   class_exec &shared_examples_32

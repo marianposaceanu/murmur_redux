@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.version       = MurmurRedux::VERSION
   gem.platform      = Gem::Platform::RUBY
   gem.summary       = 'A simple wrapper around murmurhash3 C extension.'
+  gem.description   = 'A simple wrapper around murmurhash3 C extension originally based on https://github.com/funny-falcon/murmurhash3-ruby'
   gem.author        = 'Marian Posaceanu'
   gem.email         = 'contact@marianposaceanu.com'
   gem.files         = `git ls-files`.split("\n")
@@ -14,6 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib', 'ext']
   gem.homepage      = 'https://github.com/dakull/murmur_redux'
   gem.extensions    = FileList["ext/**/extconf.rb"]
+  gem.license       = 'MIT'
 
   gem.required_ruby_version = '>= 1.9.2'
 end
