@@ -1,20 +1,20 @@
-$LOAD_PATH.push File.expand_path("../lib", __FILE__)
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
+require 'rake'
 require 'murmur_redux/version'
 
-Gem::Specification.new do |s|
-  s.name          = 'murmur_redux'
-  s.version       = MurmurRedux::VERSION
-  s.platform      = Gem::Platform::RUBY
-  s.summary       = 'A simple wrapper around murmurhash3 gem with a nicer API.'
-  s.description   = 'A simple wrapper around murmurhash3 gem with a nicer API : MurmurRedux::Hash.digest(string)'
-  s.author        = 'Marian Posaceanu'
-  s.email         = 'contact@marianposaceanu.com'
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.require_paths = ['lib']
-  s.homepage      = 'https://github.com/dakull/murmur_redux'
+Gem::Specification.new do |gem|
+  gem.name          = 'murmur_redux'
+  gem.version       = MurmurRedux::VERSION
+  gem.platform      = Gem::Platform::RUBY
+  gem.summary       = 'A simple wrapper around murmurhash3 gem with a nicer API.'
+  gem.description   = 'A simple wrapper around murmurhash3 gem with a nicer API : MurmurRedux::Hash.digest(string)'
+  gem.author        = 'Marian Posaceanu'
+  gem.email         = 'contact@marianposaceanu.com'
+  gem.files         = `git ls-files`.split("\n")
+  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  gem.require_paths = ['lib', 'ext']
+  gem.homepage      = 'https://github.com/dakull/murmur_redux'
+  gem.extensions    = FileList["ext/**/extconf.rb"]
 
-  s.required_ruby_version = '>= 1.9.2'
-
-  s.add_dependency('murmurhash3', '~> 0.1.3')
+  gem.required_ruby_version = '>= 1.9.2'
 end

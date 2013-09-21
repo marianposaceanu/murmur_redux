@@ -2,7 +2,7 @@ module MurmurRedux
   class Hash
     class << self
       def digest(string)
-        ints = MurmurHash3::V128.str_hash(string)
+        ints = MurmurRedux::V128.str_hash(string)
 
         generate_hex_string(ints)
       end
