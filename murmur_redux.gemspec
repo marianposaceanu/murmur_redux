@@ -6,8 +6,7 @@ Gem::Specification.new do |gem|
   gem.name          = 'murmur_redux'
   gem.version       = MurmurRedux::VERSION
   gem.platform      = Gem::Platform::RUBY
-  gem.summary       = 'A simple wrapper around murmurhash3 gem with a nicer API.'
-  gem.description   = 'A simple wrapper around murmurhash3 gem with a nicer API : MurmurRedux::Hash.digest(string)'
+  gem.summary       = 'A simple wrapper around murmurhash3 C extension.'
   gem.author        = 'Marian Posaceanu'
   gem.email         = 'contact@marianposaceanu.com'
   gem.files         = `git ls-files`.split("\n")
