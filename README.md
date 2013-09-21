@@ -1,8 +1,13 @@
 # Murmur redux
 
-A simpler wrapper around [murmurhash3](https://github.com/funny-falcon/murmurhash3-ruby) gem with a nicer API.
+A simple wrapper around murmurhash3 C extension originally based on murmurhash3-ruby gem[0]
+
+> MurmurHash is a non-cryptographic hash function suitable for general hash-based lookup. It was created by Austin Appleby in , and exists in a number of variants, all of which have been released into the public domain. When compared to other popular hash functions, MurmurHash performed well in a random distribution of regular keys.[1]
 
 It defaults to `MurmurHash3_x86_128` which is a nice combination of low latency and with good collision resistence.
+
+- [0] - [Github repo for murmurhash3-ruby gem](https://github.com/funny-falcon/murmurhash3-ruby)
+- [1] - [Wikipedia article](http://en.wikipedia.org/wiki/MurmurHash)
 
 ## Installation
 
