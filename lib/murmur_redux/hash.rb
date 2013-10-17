@@ -1,17 +1,15 @@
 module MurmurRedux
-  class Hash
-    class << self
-      def digest(string)
-        ints = MurmurRedux::V128.str_hash(string)
+  module Hash
+    def self.digest(string)
+      ints = MurmurRedux::V128.str_hash(string)
 
-        generate_hex_string(ints)
-      end
+      generate_hex_string(ints)
+    end
 
-      private
+    private
 
-      def generate_hex_string(ints)
-        ints.pack('L*').unpack('H*').first
-      end
+    def self.generate_hex_string(ints)
+      ints.pack('L*').unpack('H*').first
     end
   end
 end
