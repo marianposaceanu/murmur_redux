@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.author        = 'Marian Posaceanu'
   gem.email         = 'contact@marianposaceanu.com'
   gem.files         = `git ls-files`.split("\n")
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  gem.test_files    = `git ls-files -- {spec}/*`.split("\n")
   gem.require_paths = ['lib', 'ext']
   gem.homepage      = 'https://github.com/dakull/murmur_redux'
   gem.extensions    = FileList["ext/**/extconf.rb"]
